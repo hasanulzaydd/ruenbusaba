@@ -30,29 +30,38 @@
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(201,165,90,0.12);
     }
+    .rest-hero-h1 { font-size: 7rem; letter-spacing: 8px; line-height: 1; margin-top: -8px; font-weight: 300; }
+    .rest-hero-script { font-size: 3rem; line-height: 1; }
+    .about-h2 { font-size: 3.2rem; letter-spacing: 2px; line-height: 1.1; font-weight: 300; }
+    .section-heading { font-size: 3.5rem; letter-spacing: 3px; font-weight: 300; }
     @media (max-width: 768px) {
-  .top-nav { padding: 12px 16px !important; }
-  .top-nav-links { display: none; }
-  .top-nav-mobile-cta { display: flex !important; }
-  .rest-hero h1 { font-size: 2.8rem !important; letter-spacing: 2px !important; }
-  .rest-hero .hero-script { font-size: 2rem !important; }
-  .about-split, .ambiance-split { flex-direction: column !important; min-height: unset !important; }
-  .about-split .rest-half, .ambiance-split .rest-half { width: 100% !important; }
-  .about-split .rest-img, .ambiance-split .rest-img { height: 60vw !important; min-height: 220px; }
-  .about-split .rest-text, .ambiance-split .rest-text { padding: 36px 20px !important; }
-  .features-section { padding: 60px 20px !important; }
-  .features-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
-  .photo-grid-3 { grid-template-columns: 1fr !important; height: auto !important; }
-  .photo-grid-3 > div { height: 56vw; }
-  .photo-grid-2 { grid-template-columns: 1fr !important; height: auto !important; }
-  .photo-grid-2 > div { height: 56vw; }
-  .visit-section { padding: 60px 20px !important; }
-  .contact-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
-  .stats-row { flex-wrap: wrap; gap: 20px !important; }
-  .stats-divider { display: none; }
-  .about-h2, .section-h2-rest { font-size: 2.2rem !important; letter-spacing: 1px !important; }
-  .rest-footer-inner { flex-direction: column !important; gap: 24px !important; padding: 32px 16px !important; }
-}
+      .top-nav { padding: 12px 16px !important; }
+      .top-nav-links { display: none !important; }
+      .top-nav-mobile-cta { display: flex !important; }
+      .rest-hero-h1 { font-size: 2.4rem !important; letter-spacing: 2px !important; }
+      .rest-hero-script { font-size: 1.8rem !important; }
+      .about-split, .ambiance-split { flex-direction: column !important; min-height: unset !important; }
+      .about-split .rest-half, .ambiance-split .rest-half { width: 100% !important; }
+      .about-split .rest-img, .ambiance-split .rest-img { height: 70vw !important; min-height: 220px !important; }
+      .about-split .rest-text, .ambiance-split .rest-text { padding: 36px 20px !important; width: 100% !important; }
+      .about-split .rest-text p, .ambiance-split .rest-text p { max-width: 100% !important; }
+      .rest-half { width: 100% !important; }
+      .about-h2 { font-size: 2rem !important; letter-spacing: 1px !important; }
+      .section-heading { font-size: 2rem !important; letter-spacing: 1px !important; }
+      .features-section { padding: 50px 20px !important; }
+      .features-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+      .photo-grid-3 { grid-template-columns: 1fr !important; height: auto !important; }
+      .photo-grid-3 > div { height: 60vw !important; }
+      .photo-grid-2 { grid-template-columns: 1fr !important; height: auto !important; }
+      .photo-grid-2 > div { height: 60vw !important; }
+      .visit-section { padding: 50px 20px !important; }
+      .contact-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+      .stats-row { flex-wrap: wrap; gap: 20px !important; }
+      .stats-divider { display: none !important; }
+      .rest-footer-inner { flex-direction: column !important; gap: 24px !important; padding: 32px 16px !important; }
+      .features-section-title { font-size: 2rem !important; letter-spacing: 1px !important; }
+      .visit-section-title { font-size: 2rem !important; letter-spacing: 1px !important; }
+    }
   </style>
   <script>
     window.addEventListener('scroll', () => {
@@ -86,9 +95,9 @@
   <section class="relative flex items-center justify-center rest-hero" style="height: 100vh;">
     <img src="photos-to-vibe/interior-table.jpg" alt="Ruen Busaba" class="absolute inset-0 w-full h-full object-cover object-center">
     <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(13,10,8,0.4) 0%, rgba(13,10,8,0.35) 50%, rgba(13,10,8,0.9) 100%);"></div>
-    <div class="relative z-10 text-center">
-      <p class="font-script text-gold hero-script" style="font-size:3rem; line-height:1;">Experience</p>
-      <h1 class="font-display text-white" style="font-weight:300; font-size:7rem; letter-spacing:8px; line-height:1; margin-top:-8px;">Ruen Busaba</h1>
+    <div class="relative z-10 text-center px-4">
+      <p class="font-script text-gold rest-hero-script">Experience</p>
+      <h1 class="font-display text-white rest-hero-h1">Ruen Busaba</h1>
       <p class="text-white/50 mt-4" style="font-size:0.78rem; letter-spacing:0.3em; text-transform:uppercase;">House of Flowers for the Lords</p>
     </div>
     <!-- Scroll hint -->
@@ -109,15 +118,15 @@
   <section class="flex about-split" style="min-height: 620px;">
 
     <!-- Left: stone carving -->
-    <div class="relative w-1/2 overflow-hidden rest-half rest-img">
+    <div class="relative overflow-hidden rest-half rest-img" style="width:50%;">
       <img src="photos-to-vibe/decor-carving.jpg" alt="Thai décor" class="w-full h-full object-cover object-center">
       <div class="absolute inset-0" style="background: rgba(13,10,8,0.3);"></div>
     </div>
 
     <!-- Right: story -->
-    <div class="w-1/2 flex flex-col justify-center px-16 py-16 rest-half rest-text" style="background: #100d0a;">
+    <div class="flex flex-col justify-center rest-half rest-text" style="width:50%; background: #100d0a; padding: 64px;">
       <p class="font-script text-gold mb-3" style="font-size:2rem;">Our Story</p>
-      <h2 class="font-display text-white mb-8 about-h2" style="font-weight:300; font-size:3.2rem; letter-spacing:2px; line-height:1.1;">The House of<br>Flowers</h2>
+      <h2 class="font-display text-white mb-8 about-h2">The House of<br>Flowers</h2>
       <p class="text-white/50 leading-relaxed mb-5" style="font-size:0.85rem; max-width:420px;">
         "Busaba" is Thailand's national flower — the Plumeria — and "Ruen" means a place where those of noble spirit come to gather. Ruen Busaba is more than a restaurant. It is an invitation to step into the soul of ancient Thailand, right in the heart of Dhaka.
       </p>
@@ -137,7 +146,7 @@
 
       <div class="text-center mb-20">
         <p class="font-script text-gold mb-2" style="font-size:2.2rem;">What sets us apart</p>
-        <h2 class="font-display text-white" style="font-weight:300; font-size:3.5rem; letter-spacing:3px;">The Ruen Busaba Difference</h2>
+        <h2 class="font-display text-white section-heading features-section-title">The Ruen Busaba Difference</h2>
       </div>
 
       <div class="grid grid-cols-3 gap-16 features-grid">
@@ -227,16 +236,16 @@
   <section class="flex flex-row-reverse ambiance-split" style="min-height: 560px;">
 
     <!-- Right: photo -->
-    <div class="relative w-1/2 overflow-hidden rest-half rest-img">
+    <div class="relative overflow-hidden rest-half rest-img" style="width:50%;">
       <img src="photos-to-vibe/interior-entrance.jpg" alt="Restaurant entrance" class="w-full h-full object-cover object-top">
       <div class="absolute inset-0" style="background: rgba(13,10,8,0.25);"></div>
       <div class="absolute inset-x-0 bottom-0" style="height:160px; background: linear-gradient(to top, rgba(13,10,8,0.95) 0%, transparent 100%);"></div>
     </div>
 
     <!-- Left: text -->
-    <div class="w-1/2 flex flex-col justify-center px-16 py-16 rest-half rest-text" style="background: #100d0a;">
+    <div class="flex flex-col justify-center rest-half rest-text" style="width:50%; background: #100d0a; padding: 64px;">
       <p class="font-script text-gold mb-3" style="font-size:2rem;">Ambiance</p>
-      <h2 class="font-display text-white mb-8" style="font-weight:300; font-size:3.2rem; letter-spacing:2px; line-height:1.1;">A Journey to<br>Ancient Thailand</h2>
+      <h2 class="font-display text-white mb-8 about-h2">A Journey to<br>Ancient Thailand</h2>
       <p class="text-white/50 leading-relaxed mb-5" style="font-size:0.85rem; max-width:420px;">
         Step through our doors and find yourself transported. Intricately carved wood panels rise to bamboo ceilings. Stone reliefs of Thai mythological figures line the walls. A wishing bell at the entrance invites you to pause before you dine.
       </p>
@@ -269,7 +278,7 @@
 
       <div class="text-center mb-16">
         <p class="font-script text-gold mb-2" style="font-size:2.2rem;">Come visit us</p>
-        <h2 class="font-display text-white" style="font-weight:300; font-size:3.5rem; letter-spacing:3px;">Find Ruen Busaba</h2>
+        <h2 class="font-display text-white section-heading visit-section-title">Find Ruen Busaba</h2>
       </div>
 
       <div class="grid grid-cols-3 gap-16 text-center contact-grid">
