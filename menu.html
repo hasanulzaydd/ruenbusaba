@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu – Ruen Busaba</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face { font-family: 'Great Vibes'; font-style: normal; font-weight: 400; src: url('fonts/GreatVibes-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 400; src: url('fonts/Cinzel-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 500; src: url('fonts/Cinzel-Medium.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 600; src: url('fonts/Cinzel-SemiBold.ttf') format('truetype'); }
+  </style>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Cinzel', serif; margin: 0; padding: 0; background: #0d0a08; }
+    .font-script { font-family: 'Great Vibes', cursive; }
+    .font-display { font-family: 'Cinzel', serif; }
+    .text-gold { color: #c9a55a; }
+    .border-gold { border-color: #c9a55a; }
+
+    /* Top nav glass */
+    .top-nav {
+      background: rgba(13,10,8,0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,165,90,0.15);
+    }
+
+    /* Dotted price leader */
+    .menu-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .menu-item-leader {
+      flex: 1;
+      border-bottom: 1px dotted rgba(255,255,255,0.12);
+      margin-bottom: 4px;
+    }
+
+    /* Category separator */
+    .cat-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .cat-rule::before, .cat-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,165,90,0.3), transparent);
+    }
+    @media (max-width: 768px) {
+  .top-nav { padding: 12px 16px !important; }
+  .top-nav-links { display: none; }
+  .top-nav-mobile-cta { display: flex !important; }
+  .menu-hero { min-height: 280px !important; }
+  .menu-hero h1 { font-size: 2.8rem !important; letter-spacing: 2px !important; }
+  .menu-hero .hero-script { font-size: 1.6rem !important; }
+  .menu-hero .hero-meta { font-size: 0.65rem !important; }
+  .menu-content { padding: 40px 16px !important; }
+  .menu-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .menu-intro { margin-bottom: 48px !important; }
+  .cat-rule span { font-size: 1.8rem !important; }
+  .photo-break { height: 180px !important; }
+  .menu-footer-inner { flex-direction: column !important; gap: 24px !important; padding: 32px 16px !important; }
+  .menu-bottom-note { padding-top: 32px !important; }
+}
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- ==================== TOP NAV ==================== -->
+  <nav class="top-nav fixed top-0 left-0 right-0 z-50 px-12 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-white" style="font-weight:300; font-size:1.3rem; letter-spacing:0.2em; text-decoration:none;">Ruen Busaba</a>
+    <div class="flex items-center gap-8 top-nav-links">
+      <a href="menu.html" class="text-gold" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">MENU</a>
+      <a href="restaurant.html" class="text-white/60 hover:text-white transition" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">RESTAURANT</a>
+      <a href="index.html#events" class="text-white/60 hover:text-white transition" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">EVENTS</a>
+      <a href="index.html#reservation"
+         class="rounded-full transition"
+         style="border:1px solid #c9a55a; color:#c9a55a; font-size:0.7rem; letter-spacing:0.18em; padding:8px 22px; text-decoration:none;"
+         onmouseover="this.style.background='#c9a55a';this.style.color='#1a1008';"
+         onmouseout="this.style.background='transparent';this.style.color='#c9a55a';">
+        BOOK A TABLE
+      </a>
+    </div>
+    <a href="index.html#reservation" class="top-nav-mobile-cta" style="display:none; border:1px solid #c9a55a; color:#c9a55a; font-size:0.65rem; letter-spacing:0.15em; padding:7px 14px; text-decoration:none; border-radius:9999px;" onmouseover="this.style.background='#c9a55a';this.style.color='#1a1008';" onmouseout="this.style.background='transparent';this.style.color='#c9a55a';">BOOK</a>
+  </nav>
+
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative flex items-end menu-hero" style="height: 52vh; min-height: 380px; padding-top: 72px;">
+    <img src="photos-to-vibe/dish-beef.jpg" alt="Menu" class="absolute inset-0 w-full h-full object-cover object-center">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(13,10,8,0.6) 0%, rgba(13,10,8,0.2) 40%, rgba(13,10,8,0.85) 100%);"></div>
+    <div class="relative z-10 px-16 pb-14">
+      <p class="font-script text-gold hero-script" style="font-size:2.6rem; line-height:1;">Our Cuisine</p>
+      <h1 class="font-display text-white" style="font-weight:300; font-size:6rem; letter-spacing:6px; line-height:1; margin-top:-8px;">The Menu</h1>
+      <p class="text-white/50 mt-3 hero-meta" style="font-size:0.78rem; letter-spacing:0.14em;">BDT 550 – 1,850 per person &nbsp;·&nbsp; Thai Select Signature Certified</p>
+    </div>
+  </section>
+
+
+  <!-- ==================== MENU CONTENT ==================== -->
+  <div class="px-16 py-20 menu-content" style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Intro note -->
+    <p class="text-white/40 text-center mb-20 menu-intro" style="font-size:0.82rem; letter-spacing:0.1em; max-width:560px; margin-left:auto; margin-right:auto; line-height:1.9;">
+      All dishes are prepared by our Thai-trained chefs using ingredients imported directly from Thailand. Prices are in Bangladeshi Taka (BDT) and inclusive of all taxes.
+    </p>
+
+
+    <!-- ===== STARTERS & SALADS ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Starters &amp; Salads</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Papaya Salad</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 550</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Shredded green papaya, cherry tomatoes, dried shrimp, roasted peanuts, lime &amp; chilli dressing</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Mixed Seafood Salad</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 850</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Prawns, squid &amp; mussels tossed with lemongrass, kaffir lime, Thai herbs, chilli and lime juice</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Fried Chicken Namtok</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 750</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Crispy fried chicken with roasted rice powder, shallots, mint, spring onion &amp; spicy tamarind dressing</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Thai Spring Rolls</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 480</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Crispy golden rolls filled with glass noodles, vegetables &amp; minced chicken, served with sweet chilli sauce</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Satay Chicken</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 620</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Tender marinated chicken skewers grilled over charcoal, served with peanut sauce &amp; cucumber relish</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Tod Mun Pla</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 680</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Traditional Thai fish cakes with red curry paste, kaffir lime leaves &amp; snake beans, with plum dipping sauce</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ===== SOUPS ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Soups</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Tom Yum Goong</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 780</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Classic hot &amp; sour prawn soup with lemongrass, galangal, kaffir lime, mushrooms &amp; fresh chilli</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Tom Kha Gai</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 680</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Creamy coconut milk soup with chicken, galangal, lemongrass, mushrooms &amp; coriander</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Tom Yum Mixed Seafood</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 920</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Spicy aromatic broth with prawns, squid, fish &amp; mussels, fragrant with Thai herbs</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Kaeng Jued Woon Sen</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 580</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Mild clear broth with glass noodles, minced pork, tofu, mushrooms &amp; spring onion</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Full-width photo break -->
+    <div class="relative mb-20 overflow-hidden photo-break" style="height: 320px; border-radius: 2px;">
+      <img src="photos-to-vibe/interior-entrance.jpg" alt="Ruen Busaba" class="w-full h-full object-cover object-top">
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(13,10,8,0.2) 0%, rgba(13,10,8,0.7) 100%);"></div>
+      <div class="absolute inset-x-0 bottom-0" style="height:120px; background: linear-gradient(to top, rgba(13,10,8,0.98) 0%, transparent 100%);"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-center">
+        <div>
+          <p class="font-script text-gold" style="font-size:2.2rem;">Ruen Busaba</p>
+          <p class="text-white/50 mt-1" style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase;">House of Flowers for the Lords</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===== CURRIES & MAINS ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Curries &amp; Mains</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Chicken in Red Curry</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 750</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Tender chicken in rich red curry sauce with bamboo shoots, Thai basil &amp; coconut milk</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Green Curry with Prawn</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 890</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Succulent prawns in fragrant green curry paste with Thai eggplant, kaffir lime &amp; sweet basil</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Panang Beef Curry</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 950</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Slow-braised beef in thick Panang curry with roasted peanuts, kaffir lime leaves &amp; coconut cream</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Massaman Lamb</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 1,200</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Slow-cooked lamb shoulder in rich Massaman curry with potatoes, onions &amp; roasted peanuts</p>
+        </div>
+
+        <div class="col-span-2">
+          <div class="menu-item">
+            <div>
+              <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">River Prawn in Black Pepper Sauce</span>
+              <span class="ml-3 text-gold" style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; border:1px solid rgba(201,165,90,0.4); padding:2px 8px;">Signature</span>
+            </div>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 1,850</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Giant river prawns wok-tossed in house black pepper sauce with garlic, butter, spring onion &amp; Chinese celery</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Pad Krapow Moo</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 680</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Stir-fried minced pork with holy basil, garlic, chilli &amp; oyster sauce, served with fried egg &amp; steamed rice</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Pla Nueng Manao</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 1,400</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Whole steamed sea bass with spicy lime &amp; garlic sauce, lemongrass, galangal &amp; fresh coriander</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ===== NOODLES & RICE ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Noodles &amp; Rice</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Pad Thai</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 650 – 850</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Stir-fried rice noodles with egg, bean sprouts, spring onion &amp; crushed peanuts — Chicken · Prawn · Seafood</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Pad See Ew</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 620</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Wide rice noodles stir-fried with egg, Chinese broccoli &amp; sweet soy sauce — Chicken or Beef</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Khao Pad Thai</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 580</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Thai-style jasmine fried rice with egg, vegetables &amp; seasoning — Chicken, Prawn or Vegetable</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Khao Man Gai</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 550</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Poached chicken on fragrant rice cooked in chicken broth, served with ginger &amp; fermented soybean sauce</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Guay Teow Rua</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 650</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Boat noodle soup with braised beef, pork blood, herbs &amp; aromatic dark broth — a Bangkok street classic</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Khao Sticky Rice</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 180</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Steamed Thai glutinous rice — the perfect accompaniment to all Thai curries and grills</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ===== DESSERTS ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Desserts</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Sticky Rice with Mango</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 380</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Warm glutinous rice in sweet coconut milk with fresh ripe mango &amp; toasted sesame seeds</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Custard Dimsum</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 320</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Silky steamed egg custard dumplings with a delicate pandan &amp; coconut aroma</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Thai Coconut Ice Cream</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 280</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Homemade coconut ice cream with roasted peanuts, corn &amp; sticky rice — served in a fresh coconut shell</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Pandan Pannacotta</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 350</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Silky Thai pandan pannacotta with palm sugar caramel &amp; toasted coconut flakes</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Kluay Buad Chee</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 300</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Warm banana in sweet jasmine-scented coconut milk — a beloved Thai temple dessert</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ===== BEVERAGES ===== -->
+    <div class="mb-20">
+      <div class="cat-rule">
+        <span class="font-script text-gold" style="font-size:2.8rem; white-space:nowrap;">Beverages</span>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 gap-y-8 menu-grid">
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Thai Iced Tea</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 220</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Strong orange-spiced Thai tea with sweet condensed milk over ice</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Young Coconut Water</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 280</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Fresh young coconut water served in the shell, naturally hydrating &amp; refreshing</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Lemongrass Cooler</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 250</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">House-brewed lemongrass &amp; pandan iced drink with a hint of honey &amp; kaffir lime</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Nam Ma Prao</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 260</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Fresh coconut milk blended with pandan &amp; palm sugar — chilled and lightly sweet</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Roselle Hibiscus Iced Tea</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 240</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Vibrant deep-ruby hibiscus tea with a tangy, floral sweetness — served over ice</p>
+        </div>
+
+        <div>
+          <div class="menu-item">
+            <span class="font-display text-white" style="font-size:1.2rem; font-weight:400;">Filtered Water</span>
+            <span class="menu-item-leader"></span>
+            <span class="text-gold" style="font-size:0.85rem; letter-spacing:0.05em; white-space:nowrap;">BDT 80</span>
+          </div>
+          <p class="text-white/35 mt-1" style="font-size:0.75rem; line-height:1.7;">Still or sparkling — served chilled</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Bottom note -->
+    <div class="text-center pt-8 menu-bottom-note" style="border-top: 1px solid rgba(201,165,90,0.15);">
+      <p class="font-script text-gold mb-2" style="font-size:2rem;">A note from the kitchen</p>
+      <p class="text-white/35" style="font-size:0.75rem; letter-spacing:0.08em; line-height:2; max-width:500px; margin:0 auto;">
+        Please inform our staff of any allergies or dietary requirements.<br>
+        All dishes contain authentic Thai seasonings and may be spiced to your preference.<br>
+        Spice level: Mild · Medium · Thai-style
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background: #080604; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 40px;">
+    <div class="flex gap-20 px-16 py-10 items-start menu-footer-inner">
+      <div class="flex-1">
+        <img src="photos-to-vibe/logo.jpg" alt="Ruen Busaba" class="mb-3 rounded" style="height:56px; width:auto;">
+        <p class="text-white/30 text-xs">House of Flowers for the Lords</p>
+        <p class="text-white/30 text-xs">Banani, Dhaka, Bangladesh</p>
+      </div>
+      <div>
+        <h4 class="text-white/40 mb-4" style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;">Pages</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-white/35 text-sm hover:text-white/70 transition" style="text-decoration:none;">Home</a></li>
+          <li><a href="menu.html" class="text-white/35 text-sm hover:text-white/70 transition" style="text-decoration:none;">Menu</a></li>
+          <li><a href="restaurant.html" class="text-white/35 text-sm hover:text-white/70 transition" style="text-decoration:none;">Restaurant</a></li>
+          <li><a href="index.html#reservation" class="text-white/35 text-sm hover:text-white/70 transition" style="text-decoration:none;">Book a Table</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white/40 mb-4" style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;">Contact</h4>
+        <ul class="space-y-2">
+          <li class="text-white/35 text-sm">+880 1991-182785</li>
+          <li class="text-white/35 text-sm">ruenbusaba@gmail.com</li>
+          <li class="text-white/35 text-sm">1:00 PM – 11:00 PM Daily</li>
+          <li class="text-white/35 text-sm">House 62, Block-D, Road 10<br>Banani, Dhaka</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

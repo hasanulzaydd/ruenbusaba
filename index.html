@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruen Busaba – House of Flowers for the Lords</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face { font-family: 'Great Vibes'; font-style: normal; font-weight: 400; src: url('fonts/GreatVibes-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 400; src: url('fonts/Cinzel-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 500; src: url('fonts/Cinzel-Medium.ttf') format('truetype'); }
+    @font-face { font-family: 'Cinzel'; font-style: normal; font-weight: 600; src: url('fonts/Cinzel-SemiBold.ttf') format('truetype'); }
+  </style>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Cinzel', serif; margin: 0; padding: 0; }
+    .font-script { font-family: 'Great Vibes', cursive; }
+    .font-display { font-family: 'Cinzel', serif; }
+    .text-gold { color: #c9a55a; }
+    input:focus { outline: none; }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+    @media (max-width: 768px) {
+  .hero-h1 { font-size: 2.8rem !important; letter-spacing: 0 !important; }
+  .hero-script { font-size: 1.6rem !important; }
+  .hero-body { font-size: 0.72rem !important; }
+  .float-nav { min-width: unset !important; width: calc(100vw - 40px) !important; gap: 8px !important; padding: 10px 14px !important; }
+  .float-nav-icons, .float-nav-divider { display: none !important; }
+  .float-nav-links a { font-size: 0.7rem !important; letter-spacing: 0.06em !important; }
+  .float-nav-links { gap: 10px !important; }
+  .float-nav-cta { padding: 7px 14px !important; font-size: 0.62rem !important; }
+  .cards-section { flex-direction: column !important; height: auto !important; min-height: unset !important; }
+  .card-col { min-height: 60vw; }
+  .chef-section, .blog-section, .res-section { flex-direction: column !important; min-height: unset !important; height: auto !important; }
+  .chef-section .split-half, .blog-section .split-half, .res-section .split-half { width: 100% !important; }
+  .split-img-panel { height: 60vw !important; min-height: 220px; }
+  .chef-text-panel { padding: 32px 20px !important; }
+  .blog-list-panel { padding: 20px 16px !important; }
+  .res-form-panel { padding: 28px 20px !important; }
+  .chef-name { font-size: 2.8rem !important; }
+  .section-h2 { font-size: 2.2rem !important; letter-spacing: 1px !important; }
+  .section-script { font-size: 2rem !important; }
+  .footer-cols { flex-direction: column !important; gap: 28px !important; padding: 36px 20px !important; }
+  .res-text-block { bottom: 56px !important; }
+  .blog-news-articles .article-thumb { width: 80px !important; height: 64px !important; }
+}
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative h-screen min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
+    <!-- Background: intimate Thai table setting with warm lamp glow -->
+    <div class="absolute inset-0">
+      <img src="photos-to-vibe/interior-table.jpg" alt="Ruen Busaba dining" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(5,3,2,0.6) 0%, rgba(8,5,2,0.4) 45%, rgba(5,3,2,0.7) 100%);"></div>
+    </div>
+
+    <!-- Logo top center -->
+    <div class="absolute top-7 left-1/2 -translate-x-1/2 z-10">
+      <span class="text-white text-base font-light drop-shadow-lg" style="letter-spacing: 0.18em;">ruen busaba.</span>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-6 mt-8">
+      <p class="font-script text-gold leading-none mb-2 drop-shadow-lg hero-script" style="font-size: 3rem;">House of Flowers for the Lords</p>
+      <h1 class="font-display text-white leading-none drop-shadow-2xl hero-h1" style="font-weight: 300; font-size: 8.5rem; letter-spacing: 2px; text-shadow: 0 4px 32px rgba(0,0,0,0.5);">Thailand</h1>
+      <p class="text-white/60 mt-6 max-w-xs mx-auto leading-relaxed drop-shadow hero-body" style="font-size: 0.8rem; letter-spacing: 0.08em;">
+        Authentic Thai cuisine in the heart of Dhaka,<br>certified by Thai Select Signature.
+      </p>
+    </div>
+
+    <!-- Bottom Floating Nav — glass pill -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+      <div class="flex items-center gap-5 rounded-full px-6 py-3 float-nav"
+           style="min-width: 540px; background: rgba(255,255,255,0.08); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 8px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.15);">
+        <!-- Icons -->
+        <div class="flex items-center gap-4 float-nav-icons">
+          <button class="text-white/60 hover:text-white transition">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+            </svg>
+          </button>
+          <button class="text-white/60 hover:text-white transition">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </button>
+          <button class="text-white/60 hover:text-white transition">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+          </button>
+        </div>
+        <!-- Divider -->
+        <div class="w-px h-4 mx-1 float-nav-divider" style="background: rgba(201,165,90,0.4);"></div>
+        <!-- Nav Links -->
+        <nav class="flex items-center gap-6 float-nav-links">
+          <a href="menu.html" class="text-white/70 hover:text-white transition" style="font-size: 0.8rem; letter-spacing: 0.12em;">Menu</a>
+          <a href="restaurant.html" class="text-white/70 hover:text-white transition" style="font-size: 0.8rem; letter-spacing: 0.12em;">Restaurant</a>
+          <a href="#events" class="text-white/70 hover:text-white transition" style="font-size: 0.8rem; letter-spacing: 0.12em;">Events</a>
+        </nav>
+        <!-- CTA — gold outlined -->
+        <a href="#reservation" class="ml-auto rounded-full whitespace-nowrap transition float-nav-cta"
+           style="border: 1px solid #c9a55a; color: #c9a55a; font-size: 0.7rem; letter-spacing: 0.18em; padding: 8px 22px; text-transform: uppercase; text-decoration: none;"
+           onmouseover="this.style.background='#c9a55a';this.style.color='#1a1008';"
+           onmouseout="this.style.background='transparent';this.style.color='#c9a55a';">
+          Book a Table
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FEATURED DISHES (3 CARDS) ==================== -->
+  <section id="menu" class="flex cards-section" style="height: 78vh; min-height: 620px;">
+
+    <!-- Card 1: Spicy Grilled Beef -->
+    <div class="relative flex-1 overflow-hidden cursor-pointer group card-col">
+      <img src="photos-to-vibe/dish-beef.jpg" alt="Spicy Grilled Beef" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.08) 100%);"></div>
+      <!-- Category top-left -->
+      <div class="absolute top-6 left-6">
+        <span class="font-script text-gold" style="font-size: 1.7rem;">Grilled</span>
+      </div>
+      <!-- Title bottom-left -->
+      <div class="absolute bottom-8 left-6">
+        <h3 class="font-display text-white leading-tight" style="font-weight: 300; font-size: 3.2rem; letter-spacing: 1px;">Spicy Grilled<br>Beef</h3>
+        <p class="text-white/40 mt-2" style="font-size: 0.75rem; letter-spacing: 0.1em;">with Thai Herbs</p>
+      </div>
+    </div>
+
+    <!-- Card 2: Lunch Set Harmony (center, featured) -->
+    <div class="relative flex-1 overflow-hidden cursor-pointer group card-col">
+      <img src="photos-to-vibe/dish-lunch-set.jpg" alt="Lunch Set Harmony" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.55) 100%);"></div>
+      <!-- Logo top-center -->
+      <div class="absolute top-6 left-1/2 -translate-x-1/2">
+        <span class="text-white text-sm font-light drop-shadow" style="letter-spacing: 0.18em;">ruen busaba.</span>
+      </div>
+      <!-- VIEW + Category + Title: centered block -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4" style="padding-top: 10%;">
+        <div class="rounded-full flex items-center justify-center mb-5" style="width: 72px; height: 72px; background: rgba(240,215,160,0.88);">
+          <span class="text-gray-800 text-xs font-semibold tracking-widest uppercase">View</span>
+        </div>
+        <p class="font-script text-gold" style="font-size: 2rem; line-height: 1.1;">Set Menu</p>
+        <h3 class="font-display text-white" style="font-weight: 300; font-size: 3.2rem; line-height: 1.1; letter-spacing: 1px;">Lunch Set<br>Harmony</h3>
+        <p class="text-white/40 mt-2" style="font-size: 0.75rem; letter-spacing: 0.1em;">BDT 550 – 850 per person</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Allure of Thailand (peacock mural — ambiance/culture card) -->
+    <div class="relative flex-1 overflow-hidden cursor-pointer group card-col">
+      <img src="photos-to-vibe/decor-peacock.jpg" alt="Thai Ambiance" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 55%, rgba(0,0,0,0.05) 100%);"></div>
+      <!-- Category top-right -->
+      <div class="absolute top-6 right-6 text-right">
+        <span class="font-script text-gold" style="font-size: 1.7rem;">Experience</span>
+      </div>
+      <!-- Title bottom-right -->
+      <div class="absolute bottom-8 right-6 text-right">
+        <h3 class="font-display text-white leading-tight" style="font-weight: 300; font-size: 3.2rem; letter-spacing: 1px;">Allure of<br>Thailand</h3>
+        <p class="text-white/40 mt-2" style="font-size: 0.75rem; letter-spacing: 0.1em;">Immersive Thai ambiance</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ==================== MEET THE CHEF ==================== -->
+  <section id="restaurant" class="flex chef-section" style="min-height: 640px;">
+
+    <!-- Left: Chef photo (portrait) -->
+    <div class="relative w-1/2 overflow-hidden split-half split-img-panel" style="background: #0a0604;">
+      <img src="photos-to-vibe/chef-nualphen.jpg" alt="Iron Master Chef Nualphen" class="w-full h-full object-cover object-top">
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.45) 100%);"></div>
+    </div>
+
+    <!-- Right: Chef story -->
+    <div class="w-1/2 flex flex-col justify-center px-16 py-14 split-half chef-text-panel" style="background: #0d0a08;">
+      <p class="font-script text-gold mb-2" style="font-size: 2rem;">Meet the master behind our culinary artistries</p>
+      <p class="text-white/40 mb-2" style="font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;">Iron Master Chef</p>
+      <h2 class="font-display text-white mb-6 chef-name" style="font-weight: 300; font-size: 4.5rem; letter-spacing: 3px; line-height: 1;">Nualphen</h2>
+      <p class="text-white/50 leading-relaxed mb-4 max-w-sm" style="font-size: 0.85rem;">
+        Chef Chakri Nualphen brings decades of authentic Thai culinary mastery to Dhaka. Trained in Thailand's finest kitchens, he leads our brigade with an unwavering commitment to tradition — sourcing every spice, herb, and ingredient directly from Thailand.
+      </p>
+      <p class="text-white/50 leading-relaxed max-w-sm" style="font-size: 0.85rem;">
+        His philosophy is simple: cook with soul, serve with pride. Every dish on our menu is a testament to the pure, unadulterated flavours of Thai cuisine — unchanged, uncompromised.
+      </p>
+      <div class="mt-8 flex items-center gap-3">
+        <div class="h-px flex-1 max-w-[48px]" style="background: rgba(201,165,90,0.4);"></div>
+        <span class="text-gold tracking-widest uppercase" style="font-size: 0.65rem; letter-spacing: 0.18em;">Thai Select Signature Certified Kitchen</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== BLOG / LATEST NEWS ==================== -->
+  <section id="events" class="flex blog-section" style="min-height: 640px;">
+
+    <!-- Left: Stone carving image — atmospheric Thai décor -->
+    <div class="relative w-1/2 overflow-hidden split-half split-img-panel">
+      <img src="photos-to-vibe/decor-carving.jpg" alt="Thai stone carving décor" class="w-full h-full object-cover object-center">
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 100%);"></div>
+      <!-- Logo -->
+      <div class="absolute top-6 left-7">
+        <span class="text-white text-sm font-light drop-shadow" style="letter-spacing: 0.18em;">ruen busaba.</span>
+      </div>
+      <!-- Text -->
+      <div class="absolute bottom-14 left-10">
+        <p class="font-script text-gold section-script" style="font-size: 3.2rem;">Blog</p>
+        <h2 class="font-display text-white section-h2" style="font-weight: 300; font-size: 3.8rem; letter-spacing: 2px; line-height: 1.05;">Latest News</h2>
+      </div>
+    </div>
+
+    <!-- Right: Article list -->
+    <div class="w-1/2 flex flex-col justify-center split-half blog-list-panel blog-news-articles" style="background: #111111;">
+      <div class="px-12 py-10">
+
+        <!-- Article 1 -->
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <img src="photos-to-vibe/interior-entrance.jpg" alt="Thai Night" class="object-cover flex-shrink-0 rounded-sm article-thumb" style="width:100px; height:80px; object-position: center;">
+          <div>
+            <p class="text-white/40 text-xs mb-1.5">September 19, 2022</p>
+            <h4 class="font-display text-white mb-1.5" style="font-size: 1.15rem; font-weight: 400; letter-spacing: 0.5px;">Thai Cultural Night</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Experience the richness of Thai culture with traditional performances and imported delicacies.</p>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <img src="photos-to-vibe/hero-dining.jpg" alt="Classic Dinner" class="object-cover flex-shrink-0 rounded-sm article-thumb" style="width:100px; height:80px; object-position: center;">
+          <div>
+            <p class="text-white/40 text-xs mb-1.5">September 19, 2022</p>
+            <h4 class="font-display text-white mb-1.5" style="font-size: 1.15rem; font-weight: 400; letter-spacing: 0.5px;">Classic Dinner Night</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Savour our signature dishes crafted by Thai-trained chefs, made with ingredients flown in from Thailand.</p>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <img src="photos-to-vibe/decor-peacock.jpg" alt="Thai Select" class="object-cover flex-shrink-0 rounded-sm article-thumb" style="width:100px; height:80px; object-position: center top;">
+          <div>
+            <p class="text-white/40 text-xs mb-1.5">September 19, 2022</p>
+            <h4 class="font-display text-white mb-1.5" style="font-size: 1.15rem; font-weight: 400; letter-spacing: 0.5px;">Thai Select Signature Certified</h4>
+            <p class="text-white/40 text-xs leading-relaxed">Ruen Busaba earns the prestigious Thai Select Signature seal — the official Thai government quality mark.</p>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="flex gap-5 py-6">
+          <img src="photos-to-vibe/dish-beef.jpg" alt="Romantic Dinner" class="object-cover flex-shrink-0 rounded-sm article-thumb" style="width:100px; height:80px; object-position: center;">
+          <div>
+            <p class="text-white/40 text-xs mb-1.5">September 19, 2022</p>
+            <h4 class="font-display text-white mb-1.5" style="font-size: 1.15rem; font-weight: 400; letter-spacing: 0.5px;">Romantic Dinner</h4>
+            <p class="text-white/40 text-xs leading-relaxed">A candlelit evening amidst hand-carved Thai décor, bamboo ceilings, and the warmth of authentic flavours.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== RESERVATION SECTION ==================== -->
+  <section id="reservation" class="flex res-section" style="height: 640px;">
+
+    <!-- Left: Red curtain entrance — layered gradient covers baked text at bottom -->
+    <div class="relative w-1/2 overflow-hidden split-half split-img-panel">
+      <img src="photos-to-vibe/interior-entrance.jpg" alt="Ruen Busaba entrance" class="w-full h-full object-cover object-top">
+      <!-- Right-fade + strong bottom blackout to hide baked text -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%);"></div>
+      <div class="absolute inset-x-0 bottom-0" style="height: 220px; background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.97) 50%, rgba(0,0,0,0.0) 100%);"></div>
+      <!-- Logo -->
+      <div class="absolute top-6 left-7">
+        <span class="text-white text-sm font-light drop-shadow" style="letter-spacing: 0.18em;">ruen busaba.</span>
+      </div>
+      <!-- Text — positioned above the blackout zone -->
+      <div class="absolute left-10 res-text-block" style="bottom: 80px;">
+        <p class="font-script text-gold section-script" style="font-size: 3.2rem;">Book a table</p>
+        <h2 class="font-display text-white section-h2" style="font-weight: 300; font-size: 3.8rem; letter-spacing: 2px; line-height: 1.05;">Reservation</h2>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="w-1/2 flex flex-col justify-center px-16 py-14 split-half res-form-panel" style="background: #0d0d0d;">
+      <h2 class="font-display text-white mb-3" style="font-weight: 300; font-size: 2.6rem; letter-spacing: 1px;">Book a table</h2>
+      <p class="text-white/45 leading-relaxed mb-8 max-w-sm" style="font-size: 0.82rem;">
+        Reserve your seat at Dhaka's most authentic Thai dining experience. We're open daily from 1:00 PM to 11:00 PM. Capacity is limited to 80 guests.
+      </p>
+
+      <form class="space-y-4">
+        <div>
+          <label class="text-white/50 text-xs block mb-1.5">Name</label>
+          <input type="text" placeholder="Enter your name"
+            class="w-full bg-transparent border border-white/15 text-white placeholder-white/25 px-4 py-3 text-sm transition focus:border-white/40"
+            style="font-family: 'Cinzel', serif;">
+        </div>
+        <div>
+          <label class="text-white/50 text-xs block mb-1.5">Number of Guests</label>
+          <input type="number" value="2"
+            class="w-full bg-transparent border border-white/15 text-white px-4 py-3 text-sm transition focus:border-white/40"
+            style="font-family: 'Cinzel', serif;">
+        </div>
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <label class="text-white/50 text-xs block mb-1.5">Date</label>
+            <input type="text" placeholder="DD.MM.YYYY"
+              class="w-full bg-transparent border border-white/15 text-white placeholder-white/25 px-4 py-3 text-sm transition focus:border-white/40"
+              style="font-family: 'Cinzel', serif;">
+          </div>
+          <div class="flex-1">
+            <label class="text-white/50 text-xs block mb-1.5">Time</label>
+            <input type="text" placeholder="6:00 PM"
+              class="w-full bg-transparent border border-white/15 text-white placeholder-white/25 px-4 py-3 text-sm transition focus:border-white/40"
+              style="font-family: 'Cinzel', serif;">
+          </div>
+        </div>
+        <button type="submit"
+          class="w-full font-semibold tracking-widest uppercase text-sm py-4 mt-2 transition hover:opacity-90"
+          style="background: #f0d9a8; color: #1a1008; letter-spacing: 0.12em; border-radius: 9999px; font-family: 'Cinzel', serif;">
+          BOOK A TABLE
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="flex gap-20 px-16 py-12 items-start footer-cols">
+
+      <!-- Logo image + tagline -->
+      <div class="flex-1">
+        <img src="photos-to-vibe/logo.jpg" alt="Ruen Busaba" class="mb-3 rounded" style="height: 64px; width: auto;">
+        <p class="text-white/35 text-xs mb-0.5">House of Flowers for the Lords</p>
+        <p class="text-white/35 text-xs">Banani, Dhaka, Bangladesh</p>
+        <a href="https://facebook.com/Ruenbusaba" target="_blank" class="text-white/30 text-xs hover:text-white/60 transition mt-2 inline-block">facebook.com/Ruenbusaba</a>
+      </div>
+
+      <!-- Pages -->
+      <div>
+        <h4 class="text-white/50 text-xs mb-4" style="letter-spacing: 0.12em;">Pages</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#menu" class="text-white/40 text-sm hover:text-white/70 transition">Menu</a></li>
+          <li><a href="#restaurant" class="text-white/40 text-sm hover:text-white/70 transition">Restaurant</a></li>
+          <li><a href="#events" class="text-white/40 text-sm hover:text-white/70 transition">Events</a></li>
+          <li><a href="#reservation" class="text-white/40 text-sm hover:text-white/70 transition">Book a Table</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white/50 text-xs mb-4" style="letter-spacing: 0.12em;">Contact</h4>
+        <ul class="space-y-2.5">
+          <li class="text-white/40 text-sm">+880 1991-182785</li>
+          <li class="text-white/40 text-sm">ruenbusaba@gmail.com</li>
+          <li class="text-white/40 text-sm">1:00 PM – 11:00 PM Daily</li>
+          <li class="text-white/40 text-sm leading-relaxed">House 62, Block-D, Road 10<br>Banani, Dhaka, Bangladesh</li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
