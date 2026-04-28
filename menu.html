@@ -52,10 +52,13 @@
       height: 1px;
       background: linear-gradient(to right, transparent, rgba(201,165,90,0.3), transparent);
     }
-    @media (max-width: 768px) {
-  .top-nav { padding: 12px 16px !important; }
-  .top-nav-links { display: none; }
-  .top-nav-mobile-cta { display: flex !important; }
+    @media (max-width: 1024px) {
+  .top-nav { padding: 12px 16px !important; justify-content: space-between !important; }
+  .top-nav-logo { display: none !important; }
+  .top-nav-links { display: flex !important; gap: 16px !important; flex: 1; justify-content: flex-start; }
+  .top-nav-links a { font-size: 0.7rem !important; letter-spacing: 0.08em !important; }
+  .top-nav-links .top-nav-book-desktop { display: none !important; }
+  .top-nav-mobile-cta { display: flex !important; align-items: center; }
   .menu-hero { min-height: 280px !important; }
   .menu-hero h1 { font-size: 2.8rem !important; letter-spacing: 2px !important; }
   .menu-hero .hero-script { font-size: 1.6rem !important; }
@@ -74,13 +77,13 @@
 
   <!-- ==================== TOP NAV ==================== -->
   <nav class="top-nav fixed top-0 left-0 right-0 z-50 flex items-center justify-between" style="padding: 16px 48px;">
-    <a href="index.html" class="font-display text-white" style="font-weight:300; font-size:1.3rem; letter-spacing:0.2em; text-decoration:none; white-space:nowrap;">Ruen Busaba</a>
+    <a href="index.html" class="font-display text-white top-nav-logo" style="font-weight:300; font-size:1.3rem; letter-spacing:0.2em; text-decoration:none; white-space:nowrap;">Ruen Busaba</a>
     <div class="flex items-center gap-8 top-nav-links">
       <a href="menu.html" class="text-gold" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">MENU</a>
       <a href="restaurant.html" class="text-white/60 hover:text-white transition" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">RESTAURANT</a>
       <a href="index.html#events" class="text-white/60 hover:text-white transition" style="font-size:0.75rem; letter-spacing:0.15em; text-decoration:none;">EVENTS</a>
       <a href="index.html#reservation"
-         class="rounded-full transition"
+         class="rounded-full transition top-nav-book-desktop"
          style="border:1px solid #c9a55a; color:#c9a55a; font-size:0.7rem; letter-spacing:0.18em; padding:8px 22px; text-decoration:none; white-space:nowrap;"
          onmouseover="this.style.background='#c9a55a';this.style.color='#1a1008';"
          onmouseout="this.style.background='transparent';this.style.color='#c9a55a';">

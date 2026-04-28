@@ -20,15 +20,17 @@
     input:focus { outline: none; }
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+  .hero-bg-img { object-position: calc(50% + 30px) center !important; }
   .hero-h1 { font-size: 2.8rem !important; letter-spacing: 0 !important; }
   .hero-script { font-size: 1.6rem !important; }
   .hero-body { font-size: 0.72rem !important; }
-  .float-nav { min-width: unset !important; width: calc(100vw - 40px) !important; gap: 8px !important; padding: 10px 14px !important; }
+  .hero-logo { display: none !important; }
+  .float-nav { min-width: unset !important; width: calc(100vw - 32px) !important; gap: 0 !important; padding: 10px 16px !important; justify-content: space-between !important; }
   .float-nav-icons, .float-nav-divider { display: none !important; }
-  .float-nav-links a { font-size: 0.7rem !important; letter-spacing: 0.06em !important; }
-  .float-nav-links { gap: 10px !important; }
-  .float-nav-cta { padding: 7px 14px !important; font-size: 0.62rem !important; }
+  .float-nav-links { gap: 16px !important; flex: 1; justify-content: center; }
+  .float-nav-links a { font-size: 0.72rem !important; letter-spacing: 0.08em !important; }
+  .float-nav-cta { padding: 7px 14px !important; font-size: 0.65rem !important; margin-left: 0 !important; }
   .cards-section { flex-direction: column !important; height: auto !important; min-height: unset !important; }
   .card-col { min-height: 60vw; }
   .chef-section, .blog-section, .res-section { flex-direction: column !important; min-height: unset !important; height: auto !important; }
@@ -52,12 +54,12 @@
   <section class="relative h-screen min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
     <!-- Background: intimate Thai table setting with warm lamp glow -->
     <div class="absolute inset-0 overflow-hidden">
-      <img src="photos-to-vibe/decor-lamp.jpg" alt="Ruen Busaba dining" class="w-full h-full object-cover" style="object-position: 62% center; transform: rotate(-4deg) scale(1.18); transform-origin: center center;">
+      <img src="photos-to-vibe/interior-table-new.jpg" alt="Ruen Busaba dining" class="w-full h-full object-cover object-center hero-bg-img">
       <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(5,3,2,0.6) 0%, rgba(8,5,2,0.4) 45%, rgba(5,3,2,0.7) 100%);"></div>
     </div>
 
-    <!-- Logo top center -->
-    <div class="absolute top-7 left-1/2 -translate-x-1/2 z-10">
+    <!-- Logo top center — hidden on mobile -->
+    <div class="absolute top-7 left-1/2 -translate-x-1/2 z-10 hero-logo">
       <span class="text-white text-base font-light drop-shadow-lg" style="letter-spacing: 0.18em;">ruen busaba.</span>
     </div>
 
